@@ -34,7 +34,7 @@ public class UserManager implements UserService {
 
 	@Override
 	public void update(User user) throws BusinessException {
-		if(checkPassword(user) && checkName(user) && checkMail(user) && checkExistMail(user)) {
+		if(checkPassword(user) && checkName(user) && checkMail(user)) {
 			this.userDao.update(user);
 		}
 	}
